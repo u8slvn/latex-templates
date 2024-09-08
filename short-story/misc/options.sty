@@ -1,0 +1,21 @@
+% TOOL PACKAGES DEFINITION
+\usepackage{microtype} % for micro-typographical adjustments
+\usepackage{lettrine} % for drop caps and awesome chapter beginnings
+\usepackage{titlesec} % for manipulation of chapter titles
+\usepackage{graphicx} % for image integration
+\usepackage{todonotes} % for todo notation
+
+% FORMAT DEFINITION
+\linespread{1.5} % define space between lines
+\headsep = 50pt % define the space between the header and the text start
+\footskip = 50pt % define the space between the footnote and the text end
+
+% HEADER & FOOTER DEFINITON
+\makepagestyle{shortstory}
+\makeevenhead{shortstory}{}{\textsf{\scriptsize\scshape\thetitle}}{}
+\makeoddhead{shortstory}{}{\textsf{\scriptsize\scshape\thetitle}}{}
+\makeevenfoot{shortstory}{}{\textsf{\scriptsize\thepage}}{}
+\makeoddfoot{shortstory}{}{\textsf{\scriptsize\thepage}}{}
+
+% layout check and fix
+\checkandfixthelayout

@@ -1,0 +1,35 @@
+\documentclass[french,a4paper,12pt,oneside,openany]{memoir}
+
+% GLOBAL PACKAGES DEFINITION
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[osf]{Alegreya,AlegreyaSans}
+
+% SHORT NOVEL INFORMATION
+\newcommand{\noveltitle}{Short Story Example}
+\newcommand{\authorname}{John Doe}
+\newcommand{\editionyear}{2022}
+\newcommand{\version}{1}
+\title{\noveltitle}
+\author{\authorname}
+
+% CONFIGURATION
+\usepackage{./misc/options}
+\usepackage{./misc/commands}
+
+% DOCUMENT
+\begin{document}
+
+% front
+\frontmatter
+\input{frontmatter/titlepage}
+\input{frontmatter/copyrightpage}
+
+% content
+\pagestyle{shortstory} 
+\mainmatter
+\input{content/body}
+
+\end{document}
