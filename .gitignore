@@ -1,3 +1,6 @@
 # LaTeX build files
 **/*.log
 **/*.aux
+
+# Output of pdflatex
+**/output/

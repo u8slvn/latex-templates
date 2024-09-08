@@ -1,4 +1,4 @@
-\documentclass[french,a4paper,12pt,oneside,openany]{memoir}
+\documentclass[english, a4paper, 12pt, oneside, openany]{memoir}
 
 % GLOBAL PACKAGES DEFINITION
 \usepackage{babel}
@@ -7,8 +7,8 @@
 \usepackage{lmodern}
 \usepackage[osf]{Alegreya,AlegreyaSans}
 
-% SHORT STORY INFORMATION
-\newcommand{\noveltitle}{Short Story Example}
+% NOVEL INFORMATION
+\newcommand{\noveltitle}{Novel Example}
 \newcommand{\authorname}{John Doe}
 \newcommand{\editionyear}{2022}
 \newcommand{\version}{1}
@@ -28,8 +28,12 @@
 \input{frontmatter/copyrightpage}
 
 % content
-\pagestyle{shortstory} 
+\pagestyle{novel}
 \mainmatter
-\input{content/body}
+\include{chapters/Chapter01/index}
+\include{chapters/Chapter02/index}
+
+\backmatter
+\input{backmatter/tocpage}
 
 \end{document}

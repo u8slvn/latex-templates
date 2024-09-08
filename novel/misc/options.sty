@@ -1,0 +1,24 @@
+% TOOL PACKAGES DEFINITION
+\usepackage{microtype} % for micro-typographical adjustments
+\usepackage{lettrine} % for drop caps and awesome chapter beginnings
+\usepackage[center,sc]{titlesec} % for manipulation of chapter titles
+\usepackage{graphicx} % for image integration
+\usepackage{todonotes} % for todo notation
+
+% FORMAT DEFINITION
+\linespread{1.5} % define space between lines
+\headsep = 50pt % define the space between the header and the text start
+\footskip = 50pt % define the space between the footnote and the text end
+\setlrmarginsandblock{1in}{1in}{*} % define the left and right margin ratio
+
+% HEADER & FOOTER DEFINITON
+\makepagestyle{novel}
+\makeevenhead{novel}{}{\textsf{\scriptsize\scshape\thetitle}}{}
+\makeoddhead{novel}{}{\textsf{\scriptsize\scshape\thetitle}}{}
+\makeevenfoot{novel}{}{\textsf{\scriptsize\thepage}}{}
+\makeoddfoot{novel}{}{\textsf{\scriptsize\thepage}}{}
+
+\renewcommand\thechapter{\Roman{chapter}} % define the chapter number format
+
+% layout check and fix
+\checkandfixthelayout
