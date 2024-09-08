@@ -2,8 +2,8 @@
 
 My personal collection of LaTeX templates.
 
-✒️ **Short Story** [[example](./examples/short-story-example.pdf)] \
-&nbsp; &nbsp; &nbsp; A simple template for writing short stories with a title page and a copyright page.
+* ✒️ **Short Story** [[example](./examples/short-story-example.pdf)] \
+    A simple template for writing short stories with a title page and a copyright page.
 
 ## Build example with `pdflatex`
 
