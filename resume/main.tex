@@ -1,0 +1,174 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage[english]{datetime2}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+\usepackage[absolute]{textpos}
+\usepackage{amssymb}
+\usepackage[normalem]{ulem}
+\usepackage[default]{sourcesanspro}
+
+% Remove unused packages
+\input{glyphtounicode}
+
+% Page setup
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\DTMlangsetup[en-US]{showdayofmonth=false}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\newcommand{\monthyear}{\DTMenglishmonthname{\month} \the\year}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{flushright}
+    {\small\textit{Last updated: \monthyear}}
+\end{flushright}
+\vspace{-1.5em}
+
+\begin{center}
+    {\Huge \scshape Alex Smith} \\ \vspace{2pt}
+    \Large Software Architect - Senior Java Backend Developer\\ \vspace{8pt}
+    \small 
+    \raisebox{-0.1\height}\faPhone\ +00 0 00 00 00 00 ~ 
+    \href{mailto:alex.smith@email.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{alex.smith@email.com}} ~ 
+    \href{https://linkedin.com/in/alexsmith/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/alexsmith}} ~
+    \href{https://github.com/asmith}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/asmith}}
+    \vspace{-2pt}
+\end{center}
+
+%-----------EXPERIENCE-----------
+\section{\faBriefcase\ Experience}
+\resumeSubHeadingListStart
+    \resumeItem{\textbf{FinTech Solutions Inc.} \hfill June 2018 -- February 2021 \\
+      Lead Software Engineer --- Trading Systems \hfill Singapore}
+      \resumeItemListStart
+        \resumeItem{\textbf{High-Frequency Trading Platform:}}
+        \begin{itemize}
+          \item Designed low-latency order processing system using Java and Aerospike
+          \item Implemented real-time risk management system
+          \item Built monitoring solution using Prometheus and Grafana
+        \end{itemize}
+        \resumeItem{\textbf{Market Data Processing:}}
+        \begin{itemize}
+          \item Architected distributed market data processing system
+          \item Developed custom caching solution reducing latency by 40\%
+          \item Led team of 5 engineers implementing FIX protocol integration
+        \end{itemize}
+      \resumeItemListEnd
+
+    \resumeItem{\textbf{Cloud Systems Ltd} \hfill January 2016 -- May 2018 \\
+      Software Engineer --- Cloud Infrastructure \hfill London, UK}
+      \resumeItemListStart
+        \resumeItem{\textbf{Container Orchestration:}}
+        \begin{itemize}
+          \item Designed custom Kubernetes operators for automated service deployment
+          \item Implemented service mesh solution using Istio
+          \item Developed infrastructure-as-code using Terraform and Ansible
+        \end{itemize}
+      \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{\faGraduationCap\ Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Imperial College London}{2014 -- 2015}
+      {MSc in Computing Science}{London, UK}
+    \resumeSubheading
+      {University of Manchester}{2011 -- 2014}
+      {BSc in Computer Science}{Manchester, UK}
+  \resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS-----------
+\section{\faCertificate\ Certifications}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {AWS Solutions Architect Professional}{December 2023}
+      {Amazon Web Services {\small\href{https://verify.cert.com/id=XXX-XXX-XXX}{[Verify: XXX-XXX-XXX]}}}{Online}
+    \resumeSubheading
+      {Certified Kubernetes Administrator}{March 2022}
+      {Cloud Native Computing Foundation}{Online}
+  \resumeSubHeadingListEnd
+
+%------TECHNICAL EXPERTISE-------
+\section{\faWrench\ Technical Expertise}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{Systems Architecture}: Microservices, Event-Driven Architecture, Distributed Systems \\
+      \textbf{Development Practices}: Extreme Programming, Behavior-Driven Development, DevSecOps \\
+      \textbf{Performance Engineering}: Profiling, Optimization, Low-latency Systems \\
+      \textbf{Team Leadership}: Technical Mentoring, Architecture Governance, Agile Methodologies \\
+    }}
+  \end{itemize}
+
+%-----------TECHNICAL SKILLS-----------
+\section{\faCode\ Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{Languages}: Java (10y), Kotlin (3y), Go (2y), Python (4y) \\
+      \textbf{Frameworks}: Spring Boot, Micronaut, Vert.x, gRPC \\
+      \textbf{Data}: Kafka, Aerospike, Cassandra, PostgreSQL, Redis \\
+      \textbf{Cloud \& Infrastructure}: AWS, Kubernetes, Terraform, Istio \\
+      \textbf{Observability}: Prometheus, Grafana, Jaeger, ELK Stack \\
+    }}
+ \end{itemize}
+
+\end{document}
